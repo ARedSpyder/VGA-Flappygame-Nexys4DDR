@@ -1,0 +1,636 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+F:\ISE14.7\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml vga_top.twx vga_top.ncd -o vga_top.twr vga_top.pcf -ucf
+nexys3.ucf
+
+Design file:              vga_top.ncd
+Physical constraint file: vga_top.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3161 paths analyzed, 102 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.173ns.
+--------------------------------------------------------------------------------
+
+Paths for end point haha/rgb_1 (SLICE_X32Y101.SR), 439 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     4.827ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               haha/y_6 (FF)
+  Destination:          haha/rgb_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.011ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.127ns (1.130 - 1.257)
+  Source Clock:         ClkPort_BUFGP rising at 0.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: haha/y_6 to haha/rgb_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y98.AQ      Tcko                  0.341   haha/y<9>
+                                                       haha/y_6
+    SLICE_X29Y99.D1      net (fanout=1)        0.598   haha/y<6>
+    SLICE_X29Y99.D       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7_SW0
+    SLICE_X29Y99.C5      net (fanout=2)        0.183   N237
+    SLICE_X29Y99.C       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7
+    SLICE_X33Y103.D1     net (fanout=69)       1.158   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd26
+    SLICE_X33Y103.D      Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd108
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>561
+    SLICE_X33Y99.B4      net (fanout=2)        0.621   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd108
+    SLICE_X33Y99.B       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<1>3
+                                                       haha/_n1786128
+    SLICE_X33Y99.A4      net (fanout=1)        0.297   haha/_n1786127
+    SLICE_X33Y99.A       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<1>3
+                                                       haha/_n1786131
+    SLICE_X33Y100.B4     net (fanout=2)        0.544   haha/_n1786130
+    SLICE_X33Y100.B      Tilo                  0.097   haha/rgb<2>
+                                                       haha/_n1786141
+    SLICE_X32Y101.SR     net (fanout=2)        0.373   haha/_n1786
+    SLICE_X32Y101.CLK    Tsrck                 0.314   haha/rgb<1>
+                                                       haha/rgb_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.011ns (1.237ns logic, 3.774ns route)
+                                                       (24.7% logic, 75.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.962ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               haha/y_6 (FF)
+  Destination:          haha/rgb_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.876ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.127ns (1.130 - 1.257)
+  Source Clock:         ClkPort_BUFGP rising at 0.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: haha/y_6 to haha/rgb_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y98.AQ      Tcko                  0.341   haha/y<9>
+                                                       haha/y_6
+    SLICE_X29Y99.D1      net (fanout=1)        0.598   haha/y<6>
+    SLICE_X29Y99.D       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7_SW0
+    SLICE_X29Y99.C5      net (fanout=2)        0.183   N237
+    SLICE_X29Y99.C       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7
+    SLICE_X34Y97.D2      net (fanout=69)       1.066   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd26
+    SLICE_X34Y97.D       Tilo                  0.097   N235
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>82_SW0
+    SLICE_X34Y99.D2      net (fanout=1)        0.604   N235
+    SLICE_X34Y99.D       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd158
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>82
+    SLICE_X34Y99.C5      net (fanout=2)        0.197   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd158
+    SLICE_X34Y99.C       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd158
+                                                       haha/_n1786111
+    SLICE_X33Y100.B2     net (fanout=2)        0.618   haha/_n1786110
+    SLICE_X33Y100.B      Tilo                  0.097   haha/rgb<2>
+                                                       haha/_n1786141
+    SLICE_X32Y101.SR     net (fanout=2)        0.373   haha/_n1786
+    SLICE_X32Y101.CLK    Tsrck                 0.314   haha/rgb<1>
+                                                       haha/rgb_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.876ns (1.237ns logic, 3.639ns route)
+                                                       (25.4% logic, 74.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.019ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               haha/y_7 (FF)
+  Destination:          haha/rgb_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.819ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.127ns (1.130 - 1.257)
+  Source Clock:         ClkPort_BUFGP rising at 0.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: haha/y_7 to haha/rgb_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y98.CQ      Tcko                  0.341   haha/y<9>
+                                                       haha/y_7
+    SLICE_X29Y99.D4      net (fanout=1)        0.406   haha/y<7>
+    SLICE_X29Y99.D       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7_SW0
+    SLICE_X29Y99.C5      net (fanout=2)        0.183   N237
+    SLICE_X29Y99.C       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7
+    SLICE_X33Y103.D1     net (fanout=69)       1.158   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd26
+    SLICE_X33Y103.D      Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd108
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>561
+    SLICE_X33Y99.B4      net (fanout=2)        0.621   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd108
+    SLICE_X33Y99.B       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<1>3
+                                                       haha/_n1786128
+    SLICE_X33Y99.A4      net (fanout=1)        0.297   haha/_n1786127
+    SLICE_X33Y99.A       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<1>3
+                                                       haha/_n1786131
+    SLICE_X33Y100.B4     net (fanout=2)        0.544   haha/_n1786130
+    SLICE_X33Y100.B      Tilo                  0.097   haha/rgb<2>
+                                                       haha/_n1786141
+    SLICE_X32Y101.SR     net (fanout=2)        0.373   haha/_n1786
+    SLICE_X32Y101.CLK    Tsrck                 0.314   haha/rgb<1>
+                                                       haha/rgb_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.819ns (1.237ns logic, 3.582ns route)
+                                                       (25.7% logic, 74.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point haha/rgb_0 (SLICE_X33Y100.A4), 439 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     5.140ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               haha/y_6 (FF)
+  Destination:          haha/rgb_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.698ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.127ns (1.130 - 1.257)
+  Source Clock:         ClkPort_BUFGP rising at 0.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: haha/y_6 to haha/rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y98.AQ      Tcko                  0.341   haha/y<9>
+                                                       haha/y_6
+    SLICE_X29Y99.D1      net (fanout=1)        0.598   haha/y<6>
+    SLICE_X29Y99.D       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7_SW0
+    SLICE_X29Y99.C5      net (fanout=2)        0.183   N237
+    SLICE_X29Y99.C       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7
+    SLICE_X33Y103.D1     net (fanout=69)       1.158   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd26
+    SLICE_X33Y103.D      Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd108
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>561
+    SLICE_X33Y99.B4      net (fanout=2)        0.621   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd108
+    SLICE_X33Y99.B       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<1>3
+                                                       haha/_n1786128
+    SLICE_X33Y99.A4      net (fanout=1)        0.297   haha/_n1786127
+    SLICE_X33Y99.A       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<1>3
+                                                       haha/_n1786131
+    SLICE_X33Y100.B4     net (fanout=2)        0.544   haha/_n1786130
+    SLICE_X33Y100.B      Tilo                  0.097   haha/rgb<2>
+                                                       haha/_n1786141
+    SLICE_X33Y100.A4     net (fanout=2)        0.307   haha/_n1786
+    SLICE_X33Y100.CLK    Tas                   0.067   haha/rgb<2>
+                                                       haha/rgb_0_rstpot
+                                                       haha/rgb_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.698ns (0.990ns logic, 3.708ns route)
+                                                       (21.1% logic, 78.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.275ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               haha/y_6 (FF)
+  Destination:          haha/rgb_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.563ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.127ns (1.130 - 1.257)
+  Source Clock:         ClkPort_BUFGP rising at 0.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: haha/y_6 to haha/rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y98.AQ      Tcko                  0.341   haha/y<9>
+                                                       haha/y_6
+    SLICE_X29Y99.D1      net (fanout=1)        0.598   haha/y<6>
+    SLICE_X29Y99.D       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7_SW0
+    SLICE_X29Y99.C5      net (fanout=2)        0.183   N237
+    SLICE_X29Y99.C       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7
+    SLICE_X34Y97.D2      net (fanout=69)       1.066   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd26
+    SLICE_X34Y97.D       Tilo                  0.097   N235
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>82_SW0
+    SLICE_X34Y99.D2      net (fanout=1)        0.604   N235
+    SLICE_X34Y99.D       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd158
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>82
+    SLICE_X34Y99.C5      net (fanout=2)        0.197   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd158
+    SLICE_X34Y99.C       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd158
+                                                       haha/_n1786111
+    SLICE_X33Y100.B2     net (fanout=2)        0.618   haha/_n1786110
+    SLICE_X33Y100.B      Tilo                  0.097   haha/rgb<2>
+                                                       haha/_n1786141
+    SLICE_X33Y100.A4     net (fanout=2)        0.307   haha/_n1786
+    SLICE_X33Y100.CLK    Tas                   0.067   haha/rgb<2>
+                                                       haha/rgb_0_rstpot
+                                                       haha/rgb_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.563ns (0.990ns logic, 3.573ns route)
+                                                       (21.7% logic, 78.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.332ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               haha/y_7 (FF)
+  Destination:          haha/rgb_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.506ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.127ns (1.130 - 1.257)
+  Source Clock:         ClkPort_BUFGP rising at 0.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: haha/y_7 to haha/rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y98.CQ      Tcko                  0.341   haha/y<9>
+                                                       haha/y_7
+    SLICE_X29Y99.D4      net (fanout=1)        0.406   haha/y<7>
+    SLICE_X29Y99.D       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7_SW0
+    SLICE_X29Y99.C5      net (fanout=2)        0.183   N237
+    SLICE_X29Y99.C       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7
+    SLICE_X33Y103.D1     net (fanout=69)       1.158   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd26
+    SLICE_X33Y103.D      Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd108
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>561
+    SLICE_X33Y99.B4      net (fanout=2)        0.621   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd108
+    SLICE_X33Y99.B       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<1>3
+                                                       haha/_n1786128
+    SLICE_X33Y99.A4      net (fanout=1)        0.297   haha/_n1786127
+    SLICE_X33Y99.A       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<1>3
+                                                       haha/_n1786131
+    SLICE_X33Y100.B4     net (fanout=2)        0.544   haha/_n1786130
+    SLICE_X33Y100.B      Tilo                  0.097   haha/rgb<2>
+                                                       haha/_n1786141
+    SLICE_X33Y100.A4     net (fanout=2)        0.307   haha/_n1786
+    SLICE_X33Y100.CLK    Tas                   0.067   haha/rgb<2>
+                                                       haha/rgb_0_rstpot
+                                                       haha/rgb_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.506ns (0.990ns logic, 3.516ns route)
+                                                       (22.0% logic, 78.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point haha/rgb_0 (SLICE_X33Y100.A3), 327 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     5.215ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               haha/y_6 (FF)
+  Destination:          haha/rgb_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.623ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.127ns (1.130 - 1.257)
+  Source Clock:         ClkPort_BUFGP rising at 0.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: haha/y_6 to haha/rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y98.AQ      Tcko                  0.341   haha/y<9>
+                                                       haha/y_6
+    SLICE_X29Y99.D1      net (fanout=1)        0.598   haha/y<6>
+    SLICE_X29Y99.D       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7_SW0
+    SLICE_X29Y99.C5      net (fanout=2)        0.183   N237
+    SLICE_X29Y99.C       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7
+    SLICE_X34Y101.B4     net (fanout=69)       0.881   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd26
+    SLICE_X34Y101.B      Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<1>13
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>631
+    SLICE_X37Y99.B1      net (fanout=2)        0.703   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd129
+    SLICE_X37Y99.B       Tilo                  0.097   N347
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>33
+    SLICE_X35Y99.D2      net (fanout=1)        0.584   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>30
+    SLICE_X35Y99.CMUX    Topdc                 0.408   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>31
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>36_SW0_F
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>36_SW0
+    SLICE_X33Y100.A3     net (fanout=1)        0.470   N259
+    SLICE_X33Y100.CLK    Tas                   0.067   haha/rgb<2>
+                                                       haha/rgb_0_rstpot
+                                                       haha/rgb_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.623ns (1.204ns logic, 3.419ns route)
+                                                       (26.0% logic, 74.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.349ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               haha/y_6 (FF)
+  Destination:          haha/rgb_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.489ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.127ns (1.130 - 1.257)
+  Source Clock:         ClkPort_BUFGP rising at 0.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: haha/y_6 to haha/rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y98.AQ      Tcko                  0.341   haha/y<9>
+                                                       haha/y_6
+    SLICE_X29Y99.D1      net (fanout=1)        0.598   haha/y<6>
+    SLICE_X29Y99.D       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7_SW0
+    SLICE_X29Y99.C5      net (fanout=2)        0.183   N237
+    SLICE_X29Y99.C       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7
+    SLICE_X34Y97.D2      net (fanout=69)       1.066   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd26
+    SLICE_X34Y97.D       Tilo                  0.097   N235
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>82_SW0
+    SLICE_X34Y99.D2      net (fanout=1)        0.604   N235
+    SLICE_X34Y99.D       Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd158
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>82
+    SLICE_X35Y99.C3      net (fanout=2)        0.357   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd158
+    SLICE_X35Y99.CMUX    Tilo                  0.415   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>31
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>36_SW0_G
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>36_SW0
+    SLICE_X33Y100.A3     net (fanout=1)        0.470   N259
+    SLICE_X33Y100.CLK    Tas                   0.067   haha/rgb<2>
+                                                       haha/rgb_0_rstpot
+                                                       haha/rgb_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.489ns (1.211ns logic, 3.278ns route)
+                                                       (27.0% logic, 73.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.407ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               haha/y_7 (FF)
+  Destination:          haha/rgb_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.431ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.127ns (1.130 - 1.257)
+  Source Clock:         ClkPort_BUFGP rising at 0.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: haha/y_7 to haha/rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y98.CQ      Tcko                  0.341   haha/y<9>
+                                                       haha/y_7
+    SLICE_X29Y99.D4      net (fanout=1)        0.406   haha/y<7>
+    SLICE_X29Y99.D       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7_SW0
+    SLICE_X29Y99.C5      net (fanout=2)        0.183   N237
+    SLICE_X29Y99.C       Tilo                  0.097   N237
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>7
+    SLICE_X34Y101.B4     net (fanout=69)       0.881   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd26
+    SLICE_X34Y101.B      Tilo                  0.097   haha/GND_4_o_PWR_4_o_mux_925_OUT<1>13
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>631
+    SLICE_X37Y99.B1      net (fanout=2)        0.703   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>_bdd129
+    SLICE_X37Y99.B       Tilo                  0.097   N347
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>33
+    SLICE_X35Y99.D2      net (fanout=1)        0.584   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>30
+    SLICE_X35Y99.CMUX    Topdc                 0.408   haha/GND_4_o_PWR_4_o_mux_925_OUT<0>31
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>36_SW0_F
+                                                       haha/GND_4_o_PWR_4_o_mux_925_OUT<0>36_SW0
+    SLICE_X33Y100.A3     net (fanout=1)        0.470   N259
+    SLICE_X33Y100.CLK    Tas                   0.067   haha/rgb<2>
+                                                       haha/rgb_0_rstpot
+                                                       haha/rgb_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.431ns (1.204ns logic, 3.227ns route)
+                                                       (27.2% logic, 72.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point haha/rgb_0 (SLICE_X33Y100.A5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.064ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               haha/y_0 (FF)
+  Destination:          haha/rgb_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.328ns (Levels of Logic = 1)
+  Clock Path Skew:      0.264ns (0.836 - 0.572)
+  Source Clock:         ClkPort_BUFGP rising at 10.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: haha/y_0 to haha/rgb_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y97.AQ      Tcko                  0.141   haha/y<3>
+                                                       haha/y_0
+    SLICE_X33Y100.A5     net (fanout=6)        0.233   haha/y<0>
+    SLICE_X33Y100.CLK    Tah         (-Th)     0.046   haha/rgb<2>
+                                                       haha/rgb_0_rstpot
+                                                       haha/rgb_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.328ns (0.095ns logic, 0.233ns route)
+                                                       (29.0% logic, 71.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point haha/rgb_2 (SLICE_X33Y100.CX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.138ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               haha/y_0 (FF)
+  Destination:          haha/rgb_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.402ns (Levels of Logic = 1)
+  Clock Path Skew:      0.264ns (0.836 - 0.572)
+  Source Clock:         ClkPort_BUFGP rising at 10.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: haha/y_0 to haha/rgb_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y97.AQ      Tcko                  0.141   haha/y<3>
+                                                       haha/y_0
+    SLICE_X33Y100.CX     net (fanout=6)        0.273   haha/y<0>
+    SLICE_X33Y100.CLK    Tckdi       (-Th)     0.012   haha/rgb<2>
+                                                       haha/rgb_2_rstpot
+                                                       haha/rgb_2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.402ns (0.129ns logic, 0.273ns route)
+                                                       (32.1% logic, 67.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point haha/rgb_1 (SLICE_X32Y101.A3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.199ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               haha/y_0 (FF)
+  Destination:          haha/rgb_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.463ns (Levels of Logic = 1)
+  Clock Path Skew:      0.264ns (0.836 - 0.572)
+  Source Clock:         ClkPort_BUFGP rising at 10.000ns
+  Destination Clock:    ClkPort_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: haha/y_0 to haha/rgb_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y97.AQ      Tcko                  0.141   haha/y<3>
+                                                       haha/y_0
+    SLICE_X32Y101.A3     net (fanout=6)        0.368   haha/y<0>
+    SLICE_X32Y101.CLK    Tah         (-Th)     0.046   haha/rgb<1>
+                                                       haha/rgb_1_glue_set
+                                                       haha/rgb_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.463ns (0.095ns logic, 0.368ns route)
+                                                       (20.5% logic, 79.5% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.408ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.592ns (628.141MHz) (Tbcper_I(Fmax))
+  Physical resource: ClkPort_BUFGP/BUFG/I0
+  Logical resource: ClkPort_BUFGP/BUFG/I0
+  Location pin: BUFGCTRL_X0Y31.I0
+  Clock network: ClkPort_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: DIV_CLK<3>/CLK
+  Logical resource: DIV_CLK_0/CK
+  Location pin: SLICE_X28Y85.CLK
+  Clock network: ClkPort_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: DIV_CLK<3>/CLK
+  Logical resource: DIV_CLK_0/CK
+  Location pin: SLICE_X28Y85.CLK
+  Clock network: ClkPort_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock ClkPort
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ClkPort        |    5.173|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 3161 paths, 0 nets, and 978 connections
+
+Design statistics:
+   Minimum period:   5.173ns{1}   (Maximum frequency: 193.311MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Jun 01 10:18:46 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 687 MB
+
+
+

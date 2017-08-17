@@ -1,0 +1,7 @@
+verilog work "Y_ROM.v"
+verilog work "X_RAM.v"
+verilog work "obstacle_logic.v"
+verilog work "hvsync_generator.v"
+verilog work "haha_1.v"
+verilog work "flight_physics.v"
+verilog work "vga_top.v"
